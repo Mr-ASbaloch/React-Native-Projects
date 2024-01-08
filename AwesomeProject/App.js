@@ -1,20 +1,39 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StatusBar } from "expo-status-bar";
+import { NavigationContainer } from "@react-navigation/native";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import {
+  StyleSheet,
+  Text,
+  View,
+  SafeAreaView,
+  Image,
+  ImageBackground,
+} from "react-native";
+import Splash from "./Splash";
+import Home from "./Home";
+import Message from "./Message";
 
 export default function App() {
+  const Stack=createNativeStackNavigator()
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js  ll to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <NavigationContainer>
+    <Stack.Navigator>
+  
+      <Stack.Screen   name="App " options={{title:'Baby Care Center 🏥',
+      statusBarColor:"#B272A4"
+      }}  component={Splash}  />
+      <Stack.Screen name="Home"  component={Home}  />
+      <Stack.Screen name="Chats"  component={Message}  />
+    </Stack.Navigator>
+  </NavigationContainer>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: "#fff",
+    alignItems: "center",
+    justifyContent: "center",
   },
 });

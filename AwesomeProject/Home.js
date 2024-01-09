@@ -11,10 +11,10 @@ import {
 import PagerView from "react-native-pager-view";
 import TopRate from "./TopRate";
 
-const Home = ({navigation}) => {
+const Home = ({ navigation }) => {
   return (
     <SafeAreaView className="flex-1 flex-col">
-      <View className="flex-1 flex-row  justify-between  px-4 flex-wrap mt-4 ">
+      <View className=" flex-row  justify-between  mb-2 px-4 flex-wrap mt-4 ">
         <Image source={require("./assets/dp.png")} className="" />
         <View>
           <Text className=" text-xl justify-start ">Hi, John</Text>
@@ -28,7 +28,6 @@ const Home = ({navigation}) => {
         <Text className="text-xl mb-3 text-[#B272A4] text-center font-semibold  ">
           Babysitters nearby
         </Text>
-      
       </View>
       <TopRate />
       {/* <View className="flex-1 flex-col">
@@ -37,12 +36,10 @@ const Home = ({navigation}) => {
           <Text className="text-lg text-[#B272A4] ">See All </Text>
         </View>
       </View> */}
-     
-      
 
       <PagerView
         style={styles.viewPager}
-        className="mb-2 pb-48 flex-1 flex-col"
+        className="flex-1 mb-1 pb-80  flex-col"
         initialPage={0}
       >
         <View style={styles.page} key="1">
@@ -61,15 +58,19 @@ const Home = ({navigation}) => {
             </Text>
 
             <View className="">
-              <TouchableOpacity>
-                <Text className="text-[#c26db0]  font-semibold text-lg border p-1 mx-auto mb-2 border-[#c26db0]">
+              <TouchableOpacity
+                onPress={() => {
+                  navigation.push("Profile");
+                }}
+              >
+                <Text className="text-[#c26db0] rounded-full w-1/2 text-center   font-semibold text-lg border p-1  mx-auto mb-2 border-[#c26db0]">
                   View Profile{" "}
                 </Text>
               </TouchableOpacity>
-              <TouchableOpacity 
-              onPress={()=>{
-                navigation.push('Chats')
-              }}
+              <TouchableOpacity
+                onPress={() => {
+                  navigation.push("Chats");
+                }}
               >
                 <Text className=" rounded-full bg-[#c26db0] text-white text-lg w-1/2 mx-auto p-1 text-center ">
                   Message{" "}
@@ -91,20 +92,22 @@ const Home = ({navigation}) => {
               </View>
               {/* <Text className="text-[#c26db0] p-2 text-xl mt-2  ">Plough Close.</Text> */}
               <Text className="   mt-3 text-center p-5 ">
-                <Text className="text-[#c26db0] font-bold text-xl">Bio:</Text>{" "}
+                <Text className="text-[#c26db0] font-bold text-xl">Bio:</Text>
                 i’m handworker and focused babysitter , i have additional ...
               </Text>
               <View className="">
                 <TouchableOpacity>
-                  <Text className="text-[#c26db0]  font-semibold text-lg border p-1 mx-auto mb-2 border-[#c26db0]">
-                    View Profile{" "}
+                  <Text className="text-[#c26db0] rounded-full w-1/2 text-center  font-semibold text-lg border p-1 mx-auto mb-2 border-[#c26db0]">
+                    View Profile
                   </Text>
                 </TouchableOpacity>
-                <TouchableOpacity  onPress={()=>{
-                navigation.push('Chats')
-              }}>
+                <TouchableOpacity
+                  onPress={() => {
+                    navigation.push("Chats");
+                  }}
+                >
                   <Text className="rounded-full bg-[#c26db0] text-white text-lg w-1/2 mx-auto p-1 text-center ">
-                    Message{" "}
+                    Message
                   </Text>
                 </TouchableOpacity>
               </View>
@@ -127,13 +130,15 @@ const Home = ({navigation}) => {
             </Text>
             <View className=" ">
               <TouchableOpacity>
-                <Text className="text-[#c26db0]  font-semibold text-lg border p-1 mx-auto mb-2 border-[#c26db0]">
+                <Text className="text-[#c26db0] rounded-full w-1/2 text-center  font-semibold text-lg border p-1 mx-auto mb-2 border-[#c26db0]">
                   View Profile{" "}
                 </Text>
               </TouchableOpacity>
-              <TouchableOpacity  onPress={()=>{
-                navigation.push('Chats')
-              }}>
+              <TouchableOpacity
+                onPress={() => {
+                  navigation.push("Chats");
+                }}
+              >
                 <Text className="rounded-full bg-[#c26db0] text-white text-lg   w-1/2 mx-auto p-2 text-center ">
                   Message{" "}
                 </Text>

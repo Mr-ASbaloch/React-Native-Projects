@@ -1,9 +1,10 @@
-import React from "react";
-import { Text, View, Image } from "react-native";
+import React, { useState } from "react";
+import { Text, View, Image, ActivityIndicator } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import Ionicons from "react-native-vector-icons/Ionicons";
 
 const Message = () => {
+  const [loading, setLoading] = useState(false);
   return (
     <SafeAreaView className="flex-1 flex-col justify-center align-middle ">
       <View className="text-[#D8B8D1] bg-[#D8B8D1] px-5 m-5 p-3 rounded-lg">

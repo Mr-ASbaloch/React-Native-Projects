@@ -10,8 +10,9 @@ import {
 } from "react-native";
 // const mainImg = require("./assets/Rectangle 39999.png");
 import main from "./assets/main.png";
+import AntDesign from "react-native-vector-icons/AntDesign";
 
-const Splash = ({navigation}) => {
+const Splash = ({ navigation }) => {
   return (
     <SafeAreaView>
       <ImageBackground className="h-full" source={require("./assets/main.png")}>
@@ -20,8 +21,14 @@ const Splash = ({navigation}) => {
             Peace of Mind For Busy Parents{" "}
           </Text>
 
-          <TouchableOpacity onPress={()=>{navigation.push('Home')}}  >
-            <Text className='bg-[#B272A4] text-xl mt-2 text-center  p-3 text-white rounded-md mx-auto ' >Let’s Get Started ➡</Text>
+          <TouchableOpacity
+            onPress={() => {
+              navigation.push("Home");
+            }}
+          >
+            <Text className="bg-[#B272A4] text-xl mt-2 text-center  p-3 text-white rounded-md mx-auto ">
+              Let’s Get Started <AntDesign name="right" size={22} />{" "}
+            </Text>
           </TouchableOpacity>
         </View>
       </ImageBackground>
@@ -31,7 +38,7 @@ const Splash = ({navigation}) => {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,  
+    flex: 1,
     justifyContent: "center",
     alignItems: "center",
     width: null,

@@ -3,7 +3,7 @@ import { ScrollView, View, Text, Image } from "react-native";
 
 const TopRate = () => {
   return (
-    <ScrollView className="flex-1 flex-col ">
+    <ScrollView className="mb-10 mt-2 flex-col ">
       <View className="flex-1 flex-row justify-between mb-4 px-10 bg-gray-300 p-3 mx-4 rounded-xl">
         <Image
           source={require("./assets/Rectangle.png")}

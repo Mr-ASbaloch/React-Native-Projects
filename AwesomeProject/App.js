@@ -12,6 +12,7 @@ import {
 import Splash from "./Splash";
 import Home from "./Home";
 import Message from "./Message";
+import Profile from "./Profile";
 
 export default function App() {
   const Stack=createNativeStackNavigator()
@@ -19,11 +20,12 @@ export default function App() {
     <NavigationContainer>
     <Stack.Navigator>
   
-      <Stack.Screen   name="App " options={{title:'Baby Care Center 🏥',
+      <Stack.Screen   name="App " options={{title:'Baby Care Center ',
       statusBarColor:"#B272A4"
       }}  component={Splash}  />
       <Stack.Screen name="Home"  component={Home}  />
       <Stack.Screen name="Chats"  component={Message}  />
+      <Stack.Screen name="Profile"  component={Profile}  />
     </Stack.Navigator>
   </NavigationContainer>
   );
